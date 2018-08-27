@@ -6,7 +6,7 @@ const config = {
             port:'3306',
             database: 'solshire',
             username: 'sol_shire',
-            password: '!@s%$2se*&@#'
+            password: '123456'
         }
     }
 };
