@@ -1,9 +1,12 @@
 const router= require('express').Router();
-const userInfoRouter = require('./userInfoRouter');
+const userRouter = require('./userRouter');
+const teamRouter = require('./teamRouter');
 
 module.exports = () => {
 
-    router.use('/userInfo', userInfoRouter());
+    router.use('/user', userRouter()); //用户（登录用户）
+
+    router.use('/team', teamRouter()); //团队
 
     return router;
 };

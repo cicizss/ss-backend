@@ -29,7 +29,7 @@ sequelize
         console.error('Unable to connect to the database:', err);
     });
 
-require('./userInfo').bind(null, sequelize)();
+// require('./userInfo').bind(null, sequelize)();
 
 // sequelize.sync();
 
