@@ -27,7 +27,7 @@ module.exports = {
                 },
             ])
         }).then(data => {
-            res.send(data);
+            res.sendData(data);
         }).catch(err => {
             next(err, req, res);
         });
@@ -42,7 +42,7 @@ module.exports = {
                 notifyCount: 12,
             })
         }).then(data => {
-            res.send(data);
+            res.sendData(data);
         }).catch(err => {
             next(err, req, res);
         });

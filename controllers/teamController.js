@@ -9,7 +9,7 @@ module.exports = {
         return new promise((resolve, reject) => {
             return resolve([])
         }).then(data => {
-            res.send(data);
+            res.sendData(data);
         }).catch(err => {
             next(err, req, res);
         });
