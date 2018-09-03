@@ -4,7 +4,7 @@ const config = {
         MySqlSettings:{
             host:'47.106.176.205',
             port:'3306',
-            database: 'solshire',
+            database: 'solshire_backend',
             username: 'sol_shire',
             password: '123456'
         }

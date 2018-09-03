@@ -1,6 +1,7 @@
 const promise = require('bluebird');
 const {statusInfo} = require('error-status-helper');
 // const userInfoModule = require('../modules/userInfoModule');
+const  orm = require('../models');
 
 module.exports = {
 

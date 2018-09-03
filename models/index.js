@@ -29,8 +29,9 @@ sequelize
         console.error('Unable to connect to the database:', err);
     });
 
-// require('./userInfo').bind(null, sequelize)();
+require('./person').bind(null, sequelize)();
+require('./direct').bind(null, sequelize)();
 
-// sequelize.sync();
+sequelize.sync();
 
 module.exports = sequelize;
