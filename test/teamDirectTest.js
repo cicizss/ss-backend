@@ -1,28 +1,21 @@
 const app = require('../app');
 const agent = require('supertest').agent(app());
 
-describe('userInfo', function () {
-    var token = '';
-    before(function (done) {
-        agent.post('/userInfo/login')
-            .send({
-                user: 'chenlz',
-                password: '123456'
-            })
-            .expect(200)
-            .end(function (err, res) {
-                if (err) return done('登录失败');
-                token = "Bearer " + res.body.result.token;
-                done();
-            });
-    });
+describe('teamDirect', function () {
 
-    it('register', function (done) {
-        agent.post('/userInfo/register')
+    it('direct create', function (done) {
+        agent.post('/team/createDirect')
             .send({
-                user: 'chenlz',
-                password: '123456',
-                phone: '15623078770'
+                employeeNo: '60001',
+                jobs: 'ceo',
+                company: 'yonyou',
+                person:{
+                    realName: '陈礼赞',
+                    sex:1,
+                    certifyNo: '4201982342',
+                    tel: '1562307877',
+                    bankCardNo: '62212345678',
+                }
             })
             .expect(200)
             .end(function (err, res) {
