@@ -6,7 +6,7 @@ const config = {
             port:'3306',
             database: 'solshire_backend',
             username: 'sol_shire',
-            password: '123456'
+            password: '!@s%$2se*&@#'
         }
     }
 };

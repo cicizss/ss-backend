@@ -22,6 +22,13 @@ const  direct = (sequelize) => {
             company: { //所属公司
                 type: DataTypes.STRING,
                 allowNull: false,
+            },
+            personId :{
+                type: DataTypes.UUID,
+                allowNull: true,
+                references: {
+                    model: sequelize.model('person')
+                }
             }
         },
         {

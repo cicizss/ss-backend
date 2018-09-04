@@ -6,30 +6,30 @@ const {DataTypes} = require('sequelize');
 const  person = (sequelize) => {
     sequelize.define('person',
         {
-            id: {
+            id: { //用户ID
                 type: DataTypes.UUID,
                 primaryKey: true,
                 defaultValue: DataTypes.UUIDV4,
             },
-            realName: {
+            realName: { //真实姓名
                 type: DataTypes.STRING,
                 allowNull: false
             },
-            sex:{
+            sex:{ //性别
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            certifyNo: {
+            certifyNo: { //身份证号
                 type: DataTypes.STRING,
                 allowNull: false,
                 unique: true
             },
-            tel: {
+            tel: { //电话
                 type: DataTypes.STRING,
                 allowNull: false,
                 unique: true
             },
-            bankCardNo :{
+            bankCardNo :{ //银行卡号
                 type: DataTypes.STRING,
                 allowNull: false,
                 unique: true

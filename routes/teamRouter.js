@@ -6,5 +6,13 @@ module.exports = () => {
     router.route('/queryTeam')
         .get(teamController.queryTeam);
 
+
+    // router.route('/directList');
+
+    router.route('/createDirect')
+        .post(teamController.createDirect);
+    //
+    // router.route('/editDirect')
+
     return router;
 };

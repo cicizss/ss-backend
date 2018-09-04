@@ -32,6 +32,8 @@ sequelize
 require('./person').bind(null, sequelize)();
 require('./direct').bind(null, sequelize)();
 
+sequelize.model('direct').belongsTo(sequelize.model('person'), {foreignKey: 'personId'});
+
 sequelize.sync();
 
 module.exports = sequelize;
