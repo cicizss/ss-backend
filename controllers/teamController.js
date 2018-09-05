@@ -47,5 +47,18 @@ module.exports = {
         }).catch(err => {
             next(err, req, res);
         });
+    },
+
+    directList: (req, res, next) => {
+        const query = req.query;
+        return new promise((resolve, reject) => {
+            resolve(query);
+        }).then(data => {
+            return teamDirectModule.directList(data);
+        }).then(data => {
+            res.sendData(data);
+        }).catch(err => {
+            next(err, req, res);
+        });
     }
 }

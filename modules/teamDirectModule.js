@@ -27,6 +27,24 @@ class teamDirectModule {
             }]
         });
     }
+
+    directList(data) {
+        const {startTime, endTime} = data;
+        const options = {};
+        if(startTime && endTime) {
+            return this.teamDirect.findAll({
+                where: {
+                    createdAt: {
+                        $and: {
+                            $gte: startTime,
+                            $lte: endTime
+                        }
+                    }
+                }
+            });
+        }
+
+    }
 }
 
 module.exports = new teamDirectModule();

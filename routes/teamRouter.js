@@ -7,7 +7,8 @@ module.exports = () => {
         .get(teamController.queryTeam);
 
 
-    // router.route('/directList');
+    router.route('/directList')
+        .get(teamController.directList);
 
     router.route('/createDirect')
         .post(teamController.createDirect);
