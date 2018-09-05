@@ -17,6 +17,7 @@ const App = () => {
 
     app.use(cors());
     app.use(logger('dev'));
+    app.use(bodyParser.json({limit:'10mb'}));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: false}));
     app.use(routes());
